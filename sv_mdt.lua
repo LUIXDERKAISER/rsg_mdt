@@ -7,7 +7,7 @@ RegisterCommand(""..Config.Command.."", function(source, args)
 	local xPlayer = RSGCore.Functions.GetPlayer(_source)
 	local group = RSGCore.Functions.GetPermission(_source)
     local cid = xPlayer.PlayerData.citizenid
-	local job = Player.PlayerData.job.name --something wrong with this part, also need to get jobgrade as well
+	local job = xPlayer.PlayerData.job.name --something wrong with this part, also need to get jobgrade as well
 	local officername = xPlayer.PlayerData.charinfo.firstname .. ' ' .. xPlayer.PlayerData.charinfo.lastname
     local job_access = false
         for k,v in pairs(Config.Jobs) do
